@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+             <h1 class="logo"><a href="#">Classic Steps</a></h1>
+            <nav class="nav-links">
+                <a href="#" data-category="home" class="active">Home</a>
+                <a href="#" data-category="women">Women</a>
+                <a href="#" data-category="men">Men</a>
+                <a href="#" data-category="kids">Kids</a>
+                <a href="#" data-category="contact">Contact</a>
+                <a href="#" data-category="login">Login</a>
+                 <a href="#" class="cart-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cart-count">0</span>
+                </a>
+            </nav>
+             <div class="theme-toggle">
+                 <i id="theme-icon" class="fas fa-sun"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+          <div id="dynamic-content">
+               <section id="home-section">
+                 <div class="hero">
+                     <div class="hero-content">
+                         <h2>The Ultimate Destination for Shoes</h2>
+                         <p>  Discover your next favorite pair.</p>
+                      </div>
+                     <div class="hero-image">
+                         <img src="images/logg.png" alt="Hero Shoe">
+                     </div>
+                   </div>
+              </section>
+            <div id="product-container" class="product-grid" style="display:none">
+            </div>
+            <section id="thank-you-letters" style="display:none;">
+                <div class="container">
+                  <h2>What people say?</h2>
+                    <div class="thank-you-container">
+                        <div class="letter">
+                            <p>“I absolutely love my new sneakers! They are so comfortable and stylish. Thank you!” - Sarah</p>
+                        </div>
+                        <div class="letter">
+                            <p>"The boots I bought were perfect for the winter. Great quality and service. I'll be back for more!" - John</p>
+                         </div>
+                          <div class="letter">
+                             <p>“Thank you for helping me choose the best running shoes for my kids. They love them!” - Emily</p>
+                          </div>
+                     </div>
+                 </div>
+             </section>
+ 
+               <div id="contact-section" style="display:none;">
+                     <div class="container">
+                        <h2>Contact Us</h2>
+                        <p>Feel free to contact us with any questions.</p>
+                         <div class="contact-details">
+                            <p>Email: <a href="mailto:classicsteps@gmail.com">support@shoestore.com</a></p>
+                           <p>Phone1: <a href="tel:+251909141158">+251909141158</a></p>
+                           <p>Phone2: <a href="tel:+251910543189">+251910543189</a></p>
+                       </div>
+                     </div>
+                </div>
+                  <section id="login-section" style="display:none;">
+                     <div class="container">
+                         <h2>Login</h2>
+                         <form id="login-form">
+                             <div class="form-group">
+                               <label for="username">Username:</label>
+                                 <input type="text" id="username" name="username" required>
+                             </div>
+                             <div class="form-group">
+                               <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                             </div>
+                             <button type="submit" class="login-button">Login</button>
+                          </form>
+                      </div>
+                  </section>
+             </div>
+          </div>
+     </main>
+   <footer class="footer">
+          <div class="container">
+             <div class="social-icons">
+               <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+               <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+               <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+           </div>
+           <div class="address">
+            <p>Address: Bahirdar, Ethopia</p>
+           </div>
+          <a href="#" class="telegram-bot-link">Connect to our Telegram bot</a>
+            <p>&copy; 2024 Shoe Store. All Rights Reserved.</p>
+          </div>
+     </footer>
+        <div id="cart-modal" class="modal">
+         <div class="modal-content">
+           <span class="close">&times;</span>
+             <h2>Shopping Cart</h2>
+             <div id="cart-items"></div>
+             <p id="cart-total">Total: $0.00</p>
+             <button class="checkout-button">Checkout</button>
+         </div>
+     </div>
+     <script src="script.js"></script>
+ </body>
+ </html>
+ 
